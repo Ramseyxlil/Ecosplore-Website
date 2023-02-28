@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BOX ICONS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/homePage.css">
+
+    <!-- JS -->
+    <script src="js/menu.js" defer></script>
+    <script src="js/contact.js" defer></script>
+    <script src="js/redirect.js" defer></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+
+    <title>Ecosplore</title>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="nav-header">
+        <nav class="navbar" id="home-navbar">
+
+            <!-- Normal Navbar -->
+            <a class="logo" href="#home">Eco<span id="io">splore</span></a>
+            <div class="navbar-container">
+                <a href="#about" class="navbar-link about-page-link">About</a>
+                <a href="#oceans" class="navbar-link">Ecosystem</a>
+                <a href="game/index.html" class="navbar-link game-page-link">Games</a>
+				<a href="#seacreatures" class="navbar-link">Planets</a>
+                <a href="#news" class="navbar-link">News</a>
+                <a href="#contact" class="navbar-link">Contact</a>
+            </div>
+
+            <!-- Menu Icon -->
+            <div class="menu-toggle-icon" id="menu-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+
+            <!-- Menu Box for Responsiveness-->
+            <div id="menu-container" class="menu-box">
+                <a href="#" class="menu-link add-margin-menu"><i class='bx bx-id-card'></i>About</a>
+                <a href="#planets" class="menu-link planets-link"><i class='bx bxs-planet' ></i>Ecosystem</a>
+                <a href="game/index.html" class="menu-link game-link"><i class='bx bxs-game' ></i>Games</a>
+				<a href="simulation/planets.html" class="menu-link game-link"><i class='bx bxs-game' ></i>planets</a>
+                <a href="#news" class="menu-link news-link"><i class='bx bxs-news' ></i>News</a>
+                <a href="#contact" class="menu-link contact-link"><i class='bx bxs-contact' ></i>Contact</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main id="main-container">
+        <!-- Home Page -->
+        <section id="home" class="home">
+            <img id="home-background" src="img/home_img/bg1.png" alt="Refresh Page">
+            <div id="home-main-content" class="main-content">
+                <div class="home-text">
+                    <div id="home-main-text-container">
+                        <h1 id="home-main-text" class="main-text">Explore the Earth,</h1>
+                        <h1 id="home-main-text-2" class="main-text">Discover the Beyond.</h1>
+                    </div>
+                    <div id="home-main-quote-container" class="main-quote-container">
+                        <p id="home-main-quote" class="main-quote">
+                            <strong> We will be exploring the Earth and the beauty of</strong>
+                        </p>
+                        <p id="home-main-quote-2" class="main-quote">
+                           <strong> its creatures, the sea, and even the species! Are you ready?</strong>
+                        </p>
+                        <p id="home-main-quote-2" class="main-quote">
+                            <strong> Let’s rock and roll!</strong>
+                        </p>
+                    </div>
+                    <button id="explore-btn" class="btn">Explore</button>
+                </div>
+
+                <div id="earth-img-container" class="img-container">
+                    <img id="earth-img" class="planet-img" src="img/planets/earth.png" alt="Refresh Page">
+                </div>
+            </div>
+
+            <div id="home-down-btn" class="down-btn">
+                <i class='bx bxs-chevron-down bx-md'></i>
+            </div>
+        </section>
+
+        <!-- Planets Page -->
+        <section id="planets" class="planets">
+            <img id="planets-background" src="img/home_img/bg5.png" alt="Refresh Page">
+            <div id="planets-main-content" class="main-content">
+                <div id="sun-img-container" class="img-container">
+                    <img class="planet-img" id="sun-img" src="img/planets/earth6.png" alt="Refresh Page">
+                </div>
+                <div class="planets-text">
+                    <div id="planets-main-text-container">
+                        <h1 id="planets-main-text" class="main-text">Our Eco-System. </h1>
+                    </div>
+                    <div id="planets-main-quote-container" class="main-quote-container">
+                        <p class="main-quote">The word Eco came from the Latin word “oikos”,</p>
+                        <p class="main-quote">which means household. An Ecosystem is the geographical Area</p>
+                        <p class="main-quote">where plants, animals and other creatures work together</p>
+                        <p class="main-quote">to form a bubble of life</p>
+						<br>
+                        <p class="main-quote">Our Ecosystem contains the Land,marine and Freshwater</p>
+                        <p class="main-quote">such as ponds, Lakes, <strong>underwater</strong>, Wetlands, Pools, </p>
+                        <p class="main-quote">oceans, streams, and Rivers. </p>
+                    </div>
+                    <button id="learn-more-planets-btn" class="btn">Learn More</button>
+                </div>
+            </div>
+        </section> 
+
+        <!-- News Page -->
+        <section id="news" class="news">
+            <img id="news-background" src="img/home_img/bg2.png" alt="Refresh Page">
+            <div id="news-main-content" class="main-content">
+                <div class="news-text">
+                    <div id="news-main-text-container">
+                        <h1 id="news-main-text" class="main-text">News About the Earth. </h1>
+                    </div>
+                    <div id="news-main-quote-container" class="main-quote-container">
+                        <p class="news-main-quote main-quote">To learn more about The Earth, we need to </p>
+                        <p class="news-main-quote main-quote">know the news about Earth so we can</p>
+                        <p class="news-main-quote main-quote">discover new interesting facts on Earth</p>
+                        <p class="news-main-quote main-quote">exploration. </p>
+                    </div>
+                    <button id="learn-more-news-btn" class="btn">Learn More</button> 
+                </div>
+                <div id="moon-img-container" class="img-container">
+                    <img id="moon-img" src="img/planets/earth11.png" alt="Refresh Page">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page --> 
+        <section id="contact" class="contact">
+            <img id="contact-background" src="img/home_img/SpaceBackground4.png" alt="Refresh Page">
+            <div id="main-form-container">
+                <h1 id="main-contact-title">Contact Us</h1>
+                <h3 id="contact-sub-text">
+                    Feel free to contact us if you have any questions/concerns.
+                </h3>
+                <form id="contact-form" method="POST" >
+                    <input id="user-name" name="name" type="text" placeholder="Enter Your Name">
+                    <br>
+                    <input id="user-email" name="email" type="text" placeholder="Enter Your Email">
+                    <br>
+					<input id="user-phoneno" name="Phone-no" type="text" placeholder="Enter Your Phone No">
+                    <br>
+                    <textarea id="user-message" name="message" rows="5" cols="60" placeholder="Enter Your Message"></textarea>
+                    <br>
+                    <input id="submit-btn" type="submit" value="Submit">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Text for Small Screens -->
+    <p id="hidden-small-screen-text">
+        This website doesn't support mobile devices with small screens.
+    </p> 
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBAwvDitdzCA19IZM8EEdYItyZWq98zNJU",
+            authDomain: "solario-app.firebaseapp.com",
+            projectId: "solario-app",
+            storageBucket: "solario-app.appspot.com",
+            messagingSenderId: "860389088274",
+            appId: "1:860389088274:web:9a36e7843c92aa8af08ccb",
+            measurementId: "G-DKWSTLEL4H"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        db = firebase.firestore();
+        db.settings( { timestampsInSnapshots: true } );
+
+    </script>
+
+
+</script>
+</body>
+</html>
